@@ -13,46 +13,218 @@
 </head>
 <body class="shower list">
 
-    <header class="caption">
-        <h1>Wikibase as an Infrastructure for Documents and Evaluation of Document Search</h1>
-        <p>Kushagra Singh BISEN</p>
-    </header>
+<header class="caption">
+    <h1>Wikibase as an Infrastructure for Documents and Evaluation of Document Search</h1>
+    <p>Kushagra Singh BISEN</p>
 
-    <section class="slide" id="cover">
-        <h2>Wikibase as an Infrastructure for Documents and Evaluation of Document Search</h2>
-            <h5 id="author"><a href="https://argahsuknesib.github.io">Kushagra Singh BISEN</a></h5>
-        <p class="affiliation">Laboratoire Hubert Curien, Saint Etienne</p>
-        <figure id="logo">
-            <img src="pictures/logo-LaHC.png" alt="LaHC">
-        </figure>
-        <style>
-            #author {
-                text-align: center;
-            }
+</header>
 
-            #logo {
-                text-align: center;
-            }
-            #cover h2 {
-                margin: 30px 0 0;
-                color: black;
-                text-align: center;
-                font-size: 70px;
-            }
+<section class="slide" id="cover">
+    <h1 id="h5-tag">Master 2 Defense</h1>
+    <h2>Wikibase as an Infrastructure for Documents and Evaluation of Document Search</h2>
+    <h5 id="author"><a href="https://argahsuknesib.github.io">Kushagra Singh BISEN</a></h5>
+    <p class="affiliation">Laboratoire Hubert Curien, Saint Etienne</p>
+    <figure id="logo">
+        <img src="pictures/logo-LaHC.png" alt="LaHC">
+    </figure>
+    <style>
+        #author {
+            text-align: center;
+        }
 
-            #cover p {
-                margin: 10px 0 0;
-                text-align: center;
-                color: black;
-                font-style: italic;
-                font-size: 20px;
-            }
+        #logo {
+            text-align: center;
+        }
 
-            #cover p a {
-                color: black;
-            }
-        </style>
-    </section>
+        #cover h2 {
+            margin: 30px 0 0;
+            color: black;
+            text-align: center;
+            font-size: 45px;
+        }
+
+        #cover p {
+            margin: 10px 0 0;
+            text-align: center;
+            color: black;
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        #cover p a {
+            color: black;
+        }
+
+        #h5-tag {
+            text-align: center;
+            font-size: medium;
+
+        }
+
+    </style>
+</section>
+
+<section class="slide" id="outline-slide">
+    <h2>Outline</h2>
+    <ol>
+        <li>Wikibase for Documents</li>
+        <li>Document Ontology</li>
+        <li>Wikibase Infrastructure</li>
+        <li>Experiment on Document Search</li>
+        <li>Conclusion</li>
+    </ol>
+    <style>
+        #outline-slide {
+            text-align: center;
+        }
+    </style>
+</section>
+
+<section class="slide" id="first-slide">
+    <h2>What is Wikibase?</h2>
+
+    <div>
+        <ul>
+            <li>A free, open-source Knowledge Graph.</li>
+            <li>Software behind Wikidata</li>
+            <li>Is employed to build enterprise and/or open knowledge graphs.</li>
+        </ul>
+    </div>
+    <style>
+        #first-slide {
+            text-align: center;
+        }
+
+        #footnote-1 {
+            font-size: 12px;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</section>
+
+
+<section class="slide" id="second-slide">
+    <h2>Why Wikibase?</h2>
+    <div>
+        <ul>
+            <li>Enables people not aware of Linked Data to perform CRUD tasks.</li>
+            <li>The provided API and PyWikiBot</li>
+            <li>Infrastructure is easy to setup out-of-the-box.</li>
+            <li>Blank Nodes are not allowed and a stricter data model.</li>
+        </ul>
+    </div>
+    <style>
+        #second-slide {
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</section>
+
+<section class="slide" id="third-slide">
+    <h2>Ways to make a KG : Comparison</h2>
+    <table>
+        <tr>
+            <th scope="col">Criteria</th>
+            <td>Classic RDF</td>
+            <td>Wikibase</td>
+            <td>Semantic MediaWiki</td>
+            <td>Cargo</td>
+        </tr>
+        <tr>
+            <th scope="row">Data Model</th>
+            <td></td>
+        </tr>
+
+        <tr>
+            <th scope="row">Editing</th>
+        </tr>
+
+        <tr>
+            <th scope="row">SPARQL</th>
+        </tr>
+
+        <tr>
+            <th scope="row">RDF support</th>
+        </tr>
+
+        <tr>
+            <th scope="row">Contributions</th>
+        </tr>
+
+        <tr>
+            <th scope="row">User-Interface</th>
+        </tr>
+
+        <tr>
+            <th scope="row">Out of the box</th>
+        </tr>
+
+        <tr>
+            <th scope="row">Integration with LOD</th>
+        </tr>
+    </table>
+
+    <style>
+        #third-slide {
+            font-size: medium;
+        }
+    </style>
+</section>
+
+
+<section class="slide" id="fourth-slide">
+    <h2 class="shout shrink" id="shout-h2">Why do we need to represent documents in RDF?</h2>
+    <style>
+        #shout-h2{
+            font-size: 50px;
+        }
+    </style>
+</section>
+
+<section class="slide" id="fifth-slide">
+    <h2>Ontology for Documents</h2>
+    <figure id="ontology">
+        <img src="pictures/WI-IAT2022-Ontology.drawio.svg" alt="Ontology" id="ontology-image">
+    </figure>
+    <style>
+        #fifth-slide {
+            text-align: center;
+        }
+
+        #ontology {
+            width: 60%;
+            height: 50px;
+        }
+
+        #ontology-image {
+            width: 170%;
+            height: 750%;
+        }
+    </style>
+</section>
+
+<section class="slide" id="sixth-slide">
+    <h2>Wikibase Infrastructure for Documents</h2>
+
+    <style>
+        #sixth-slide{
+            text-align: center;
+
+        }
+    </style>
+</section>
+
+<section class="slide" id="seventh-slide">
+    <h2>Lifecycle of the document</h2>
+
+    <style>
+        #seventh-slide{
+            text-align: center;
+        }
+    </style>
+</section>
 
 <!--    <section class="slide">-->
 <!--        <h2>Outline</h2>-->
@@ -198,10 +370,12 @@
 <!--        </style>-->
 <!--    </section>-->
 <!--    z-->
-<!--    <div class="progress"></div>-->
 
-<!--    <script src="shower/shower.js"></script>-->
 <!--    &lt;!&ndash; Copyright © 3000 Yours Truly, Famous Inc. &ndash;&gt;-->
 
+
+<div class="progress"></div>
+
+<script src="shower/shower.js"></script>
 </body>
 </html>
