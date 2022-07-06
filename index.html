@@ -69,7 +69,7 @@
     <ol>
         <li>Context and Problem</li>
         <li>Contribution</li>
-        <li>Evaluation</li>
+        <li>Evaluation of Document Search</li>
         <li>Conclusion</li>
     </ol>
 
@@ -115,7 +115,8 @@
             text-align: center;
             font-size: 50px;
         }
-        #slide-3{
+
+        #slide-3 {
             font-size: large;
         }
     </style>
@@ -124,9 +125,8 @@
 <section id="slide-4" class="slide">
     <h2 id="slide-4-heading">Research Questions</h2>
     <ol>
-        <li>How can we represent documents in a structured way?</li>
-        <li class="next">How can we have a uniform representation for documents of various types?</li>
-        <li class="next">How do users search for information?</li>
+        <li class="next">How can we have a uniform structured representation for documents of various types?</li>
+        <li class="next">How to evaluate search for information?</li>
         <li class="next">Can or should we combine various search techniques for one unique solution method?</li>
     </ol>
     <style>
@@ -175,10 +175,233 @@
 
 <section class="slide" id="evaluation-2">
     <h2>Search Techniques Experiment</h2>
+
+    <p>
+        We undertook a search technique experiment for searching for information in a particular domain. The information
+        was to be searched with 5 methods,
+    <ol>
+        <li>Searching with a PDF viewer</li>
+        <li>Searching over Wikibase</li>
+        <li>Searching over Structured Data</li>
+        <li>Elastic Search over Documents</li>
+        <li>Free-Text search over Documents</li>
+    </ol>
+
+    <style>
+        #evaluation-2 {
+            font-size: large;
+        }
+    </style>
 </section>
 
+<section class="slide" id="evaluation-3">
+    <h2>Search Techniques Experiment (Contd.)</h2>
+    <h5>Evaluation Techniques</h5>
+    <p id="paragraph-evaluation-3">We invited experimental subjects to search for information using different search
+        techniques. We prepared a questionnaire
+        for each search method which were divided into two parts,</p>
+    <ul>
+        <li>Search Instruction Questionnaire</li>
+        <li>User Experience Questionnaire</li>
+    </ul>
+
+    There were 17 experimental subjects, 6 questions (5 true and 1 false) to search for and 1 UEQ questionnaire to be
+    filled for each search method
 
 
+    <style>
+        #paragraph-evaluation-3 {
+            font-size: medium;
+        }
+
+        #evaluation-3 {
+            font-size: medium;
+        }
+    </style>
+
+</section>
+
+<section class="slide" id="evaluation-4">
+    <h2>Search Techniques Experiment (Contd.)</h2>
+    <h5>Search Instruction Questionnaire</h5>
+    <p id="paragraph-evaluation-4">The users had to search for information in 2 minutes and note the relevancy of the
+        information retreived
+        on a scale of 1 to 7 (the higher the better), if they found an answer and the timestamp in seconds if they found
+        the answer.</p> The questions answered from this experiment is,
+    <ul>
+        <li class="next">Did the user find an answer?</li>
+        <li class="next">What was the time taken through each method?</li>
+        <li class="next">Which method had the most relevant answers?</li>
+    </ul>
+
+
+    <style>
+        #evaluation-4 {
+            font-size: medium;
+        }
+
+        #paragraph-evaluation-4 {
+            font-size: medium;
+        }
+    </style>
+</section>
+
+<section class="slide" id="evaluation-5">
+    <h2>Search Techniques Experiment (Contd.)</h2>
+    <h5>Search Instruction Questionnaire (Contd.)</h5>
+
+    <p id="paragraph-evaluation-5">The user is expected to form his own <u> keywords</u> and <u>questions</u> to search
+        for the answer by reading the instructions.
+        We introduced a question with <u> no answer present </u> in the document corpus to count for false positives.
+        The instructions were,</p>
+
+    <table id="table-evaluation-5">
+        <tr>
+            <th scope="col">No.</th>
+            <th>Instruction to User</th>
+            <th>Answer available?</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Find text about the racism faced by black feminists</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Find text about elitism in american womens movement</td>
+            <td>Yes</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Find text about human rights of minors</td>
+            <td>No</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Find text about racism in United States</td>
+            <td>Yes</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Find text about ableism in prison</td>
+            <td>Yes</td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>Find text about police violence for disabled people</td>
+            <td>Yes</td>
+        </tr>
+
+    </table>
+
+    <style>
+        #evaluation-5 {
+            font-size: medium;
+        }
+
+        #table-evaluation-5 {
+            font-size: medium;
+        }
+
+        #paragraph-evaluation-5 {
+            font-size: small;
+        }
+    </style>
+</section>
+
+<section class="slide" id="evaluation-6">
+    <h2>Search Techniques Experiment (Contd.)</h2>
+    <h5>User Experience Questionnaire</h5>
+
+    <p id="paragraph-evaluation-6">The users had to fill a questionnaire explaining their <u>user experience</u> after
+        every
+        search method.
+        The questionnaire contains 26 individual items divided into 6 subscales (Attractivenness, Perspicuity,
+        Efficiency, Depandability, Stimulation and Novelty)</p> The questions answered from this experiment are,
+
+    <ul>
+        <li class="next">What does the user feel about the usefullness of the method? i.e Pragmatic</li>
+        <li class="next">What does the user feel about the ease of use of the method? i.e Hedonic</li>
+    </ul>
+
+    <style>
+        #evaluation-6 {
+            font-size: medium;
+        }
+
+        #paragraph-evaluation-6 {
+            font-size: medium;
+        }
+    </style>
+</section>
+
+<section class="slide" id="evaluation-7">
+    <h2 id="heading-evaluation-7">Results</h2>
+    <h5>Search Methods</h5>
+
+    <div class="columns two" id="div-evaluation-7">
+        <figure><img src="pictures/search-questions.png" alt="search questions" id="search-image">
+            <figcaption id="caption-search">Values of relevant answer from a search method</figcaption>
+        </figure>
+    </div>
+
+    <style>
+        #div-evaluation-7 {
+            text-align: center;
+        }
+
+        #caption-search {
+            font-size: medium;
+        }
+
+        #search-image {
+            align-content: center;
+            width: 400px;
+            height: 250px;
+        }
+
+    </style>
+
+</section>
+
+<section class="slide" id="evaluation-8">
+    <h2 id="heading-evaluation-8">Results</h2>
+    <h5>User Experience Questionnaire</h5>
+
+    <div class="columns two" id="div-evaluation-8">
+        <figure><img src="pictures/ueq-pragmatic.png" alt="ueq-pragmatic" id="img-1">
+            <figcaption id="caption-1">UEQ Pragmatic</figcaption>
+        </figure>
+        <figure><img src="pictures/ueq-hedonic.png" alt="ueq-hedonic" id="img-2">
+            <figcaption id="caption-2">UEQ Hedonic</figcaption>
+        </figure>
+    </div>
+
+    <style>
+        #caption-1 {
+            font-size: medium;
+        }
+
+        #caption-2 {
+            font-size: medium;
+        }
+
+        #img-1 {
+            width: 350px;
+            height: 250px;
+        }
+
+        #img-2 {
+            width: 350px;
+            height: 250px;
+        }
+    </style>
+</section>
 
 <div class="progress"></div>
 
