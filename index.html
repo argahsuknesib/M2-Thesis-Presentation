@@ -75,7 +75,7 @@
 
     <style>
         #slide-1 {
-            text-align: center;
+            /*text-align: center;*/
         }
     </style>
 </section>
@@ -133,6 +133,10 @@
         #slide-4-heading {
             text-align: center;
         }
+
+        #slide-4 {
+            font-size: large;
+        }
     </style>
 </section>
 
@@ -156,14 +160,17 @@
 
     <style>
         #slide-6-heading {
-            text-align: center;
+        }
+
+        #slide-6 {
+            font-size: medium;
         }
     </style>
 </section>
 
 
 <section class="slide" id="evaluation-1">
-    <h2 class="shout shrink" id="evaluation-1-heading">Evaluation</h2>
+    <h2 class="shout shrink" id="evaluation-1-heading">Evaluation of Document Search</h2>
 
     <style>
         #evaluation-1-heading {
@@ -403,6 +410,96 @@
     </style>
 </section>
 
+<section class="slide" id="result-1">
+    <h2 id="result-heading-1">Results</h2>
+    <h5>Discussion - Search Methods</h5>
+    <p>After analysing the results from search experiments. According to the users,</p>
+
+    <ul>
+        <li>Elastic search found the most relevant answers</li>
+        <li>It was followed by QAnswer RDF Search and Wikibase Search</li>
+        <li>With the question with no answer available, users found relevant answer with Elastic Search.</li>
+    </ul>
+
+    <style>
+        #result-1 {
+            font-size: medium;
+        }
+    </style>
+
+</section>
+<section class="slide" id="result-2">
+    <h2 id="result-heading-2">Results (Contd.)</h2>
+    <h5>Discussion - User Experience Questionnaire</h5>
+    <p>After analysing the results from user experience questionnaire. According to the users,</p>
+
+    <ul>
+        <li>The users found free-text over the documents to be more efficient and useful</li>
+        <li>It is followed by Elastic Search, and QAnswer Search over RDF in efficiency</li>
+        <li>Users found searching over documents with free-text search with the most ease-of-use</li>
+        <li>Users found other methods similar in ease of use</li>
+    </ul>
+
+    <style>
+        #result-2 {
+            font-size: medium;
+        }
+    </style>
+</section>
+<section class="slide" id="conclusion-slide-1">
+    <h2 class="shout shrink" id="conclusion">Conclusion</h2>
+
+    <style>
+        #conclusion {
+            font-size: 50px;
+        }
+    </style>
+</section>
+
+<section class="slide" id="conclusion-slide-2">
+    <h2 id="heading-conclusion-2">Conclusion</h2>
+    <ul>
+        <li>We find that as elastic search had the most relevant answers. It also provided information for instruction
+            with no actual answer in the document corpus
+        </li>
+        <li>Elastic Search is not a good method as it provides users with a false sense of information</li>
+        <li>In questions we need an exact answer from, structured data is important</li>
+        <li>In the subscales of UEQ, free-text performed the best which further supports the argument of having a
+            definitive search system over document corpus.
+        </li>
+    </ul>
+
+    <style>
+        #heading-conclusion-2 {
+            font-size: 50px;
+        }
+
+        #conclusion-slide-2 {
+            font-size: medium;
+        }
+    </style>
+</section>
+
+<section class="slide" id="conclusion-slide-3">
+    <h2 id="heading-conclusion-3">Future Work</h2>
+    <p>As I have 2 more weeks in my internship, </p>
+
+    <ul>
+        <li>The existing ontology is the one we adjusted to our needs for the project, I will work on aligning with
+            existing ontologies such as Dublin Core, FOAF, LOINC, DoCO, UN Document Ontology
+        </li>
+        <li>We will work on better methods of analysing the data generated in the evaluation of document search</li>
+        <li>We are preparing a demo paper on searching over free-text and RDF at the same time</li>
+        <li>We are also preparing a paper demonstrating wikibase as an infrastructure for valorising documents</li>
+    </ul>
+
+
+    <style>
+        #conclusion-slide-3 {
+            font-size: medium;
+        }
+    </style>
+</section>
 <div class="progress"></div>
 
 <script src="shower/shower.js"></script>
