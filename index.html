@@ -93,11 +93,21 @@
 <section class="slide" id="slide-3">
 
     <h2 id="slide-3-heading">Context and Problem</h2>
+
     <ul>
         <li>Searching for domain specific information is tough</li>
-        <li>Searching through files is taxing as user needs to refer multiple sources</li>
-        <li>Different solutions have been implemented with various techniques</li>
-        <li>Parallely, Semantic Web has emerged.</li>
+        <li>The main focus in the work is building domain specific corpus, which can be searched and queried
+            efficiently
+        </li>
+        <li>With Semantic Web, multiple tools such as Wikibase and QA systems over Knowledge Graphs have emerged</li>
+    </ul>
+
+    The issues are:
+    <ul>
+        <li>The queries can be on the content or the metadata. Do we need 2 different answering systems?</li>
+        <li>There are different existing search techniques. We need an evaluation for the search techniques to find what
+            is the best solution?
+        </li>
     </ul>
 
     <figure>
@@ -105,8 +115,8 @@
     </figure>
     <style>
         #slide-3-image {
-            width: 34%;
-            height: 50%;
+            width: 28%;
+            height: 30%;
             padding-left: 500px;
             padding-bottom: 10px;
         }
@@ -117,10 +127,40 @@
         }
 
         #slide-3 {
-            font-size: large;
+            font-size: medium;
         }
     </style>
 </section>
+
+<section id="existing-solution" class="slide">
+    <h2 id="existing-solution-heading">Existing Solutions</h2>
+    <p>
+        There have been existing solutions to make a domain specific searchable and answerable system.
+        In the paper, <cite><a href="https://arxiv.org/abs/2111.15182">[1]</a></cite> specific information
+        is extracted from the document with a neural network and generate tripes from it. Although, the ontology
+        and the triples generated are specific to that domain and cannot be extended. In the paper, <cite><a
+            href="https://ojs.aaai.org/index.php/AAAI/article/download/11316/11175">[2]</a></cite> they proposed a
+        neural
+        network model for building a question answering system.
+    </p>
+
+    <p>
+        There have been various solutions to present data in structured fashion in Wikibase. The paper, <cite><a
+            href="https://docs.enslaved.org/ontology/v2/Enslaved_Documentation_V2_0-2.pdf">[3]</a></cite> has proposed an ontology
+        for wikibase but it is domain specific as well.
+    </p>
+    <style>
+        #existing-solution {
+            font-size: medium;
+        }
+
+        #existing-solution-heading {
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</section>
+
 
 <section id="slide-4" class="slide">
     <h2 id="slide-4-heading">Research Questions</h2>
@@ -153,13 +193,28 @@
 
 
 <section id="slide-6" class="slide">
-    <h2 id="slide-6-heading">Wikibase Infrastructure</h2>
-    <p>
-        We introduce an Infrastructure for Valorising Documents with Wikibase.
-    </p>
+    <h2 id="slide-6-heading">Wikibase as Infrastructure for Documents</h2>
+    <h5>What is Wikibase?</h5>
+    <div>
+        <ul>
+            <li>A free, open source knowledge graph</li>
+            <li>It is the software behind Wikidata, one of the largest KG with 5 billion triples</li>
+            <li>It is used to build open/enterprise knowledge graphs</li>
+        </ul>
+    </div>
+    <h5>Why are we using Wikibase?</h5>
+    <div>
+        <ul>
+            <li>Excellent for people out of scope of KG to interact with structured data</li>
+            <li>Can add data by both humans and injest heterogenous data with bots</li>
+            <li>Changes can be tracked and reversed, if needed</li>
+            <li>Takes less time to setup with many features and scales up well</li>
+        </ul>
+    </div>
 
     <style>
         #slide-6-heading {
+            font-size: 30px;
         }
 
         #slide-6 {
@@ -168,6 +223,132 @@
     </style>
 </section>
 
+<section id="contribution-1" class="slide">
+    <h2 id="contribution-1-heading">Wikibase as Infrastructure for Documents</h2>
+    <figure id="architecture-figure">
+        <img src="pictures/Architecture-Diagram.drawio.svg" alt="architecture-infrastructure" id="architecture-image">
+    </figure>
+
+    <style>
+        #architecture-image {
+            align-content: center;
+            width: 1100px;
+            height: 400px;
+        }
+
+        #contribution-1-heading {
+            font-size: 30px;
+        }
+    </style>
+</section>
+
+<section id="contribution-2" class="slide">
+    <h2 id="contribution-2-heading">Ontology for Wikibase as Infrastructure for Documents</h2>
+
+    <figure id="ontology">
+        <img src="pictures/WI-IAT2022-Ontology.drawio.svg" alt="Ontology for Documents" id="ontology-image">
+    </figure>
+
+    <style>
+        #ontology-image {
+            align-content: center;
+            width: 1100px;
+            height: 400px;
+        }
+
+        #contribution-2-heading {
+            font-size: 30px;
+        }
+    </style>
+</section>
+
+<section id="contribution-3" class="slide">
+    <h2 id="contribution-3-heading" class="shout shrink">Why do we need structured data about the document and it's
+        meta-data in RDF?</h2>
+
+    <style>
+        #contribution-3-heading {
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</section>
+
+<section id="contribution-4" class="slide">
+    <h2 id="contribution-4-heading">Example Use Case</h2>
+    The documents we employed in the project for valorising them are in the domain of Disability Studies.
+    There are different types of questions that can arise, like,
+    <ul>
+        <li>Single words and definitions</li>
+        <li>Metadata of the document</li>
+        <li>Unique answer from the documents</li>
+        <li>Multiple answer from the documents</li>
+        <li>Terms from the text</li>
+    </ul>
+
+
+    <style>
+        #contribution-4 {
+            font-size: large;
+        }
+    </style>
+</section>
+
+<section class="slide" id="contribution-5">
+    <h2 id="contribution-5-heading">Combining Various Search Techniques</h2>
+    <h5>Response with Structured Data</h5>
+    <figure>
+        <img src="pictures/structured-final.png" id="structured-response" alt="Structured Response">
+    </figure>
+    <style>
+        #contribution-5 {
+            font-size: large;
+        }
+
+        #structured-response {
+            width: 800px;
+            height: 250px;
+        }
+    </style>
+</section>
+
+<section class="slide" id="contribution-6">
+    <h2 id="contribution-6-heading">Combining Various Search Techniques</h2>
+    <h5>Response with Free-Text</h5>
+    <figure>
+        <img src="pictures/free-text-final.png" id="free-text-response" alt="Free Text Response">
+    </figure>
+
+    <style>
+        #contribution-6 {
+            font-size: large;
+        }
+
+        #free-text-response {
+            width: 800px;
+            height: 300px;
+        }
+    </style>
+</section>
+
+<section class="slide" id="contribution-7">
+    <h2 id="contribution-7-heading">Combining Various Search Techniques</h2>
+    <h5>Response with Keywords</h5>
+    <figure>
+        <img src="pictures/elastic-response.png" alt="Elastic Search Response" id="elastic-search">
+    </figure>
+
+    <style>
+        #contribution-7 {
+            font-size: large;
+        }
+
+        #elastic-search {
+            width: 800px;
+            height: 300px;
+        }
+    </style>
+</section>
 
 <section class="slide" id="evaluation-1">
     <h2 class="shout shrink" id="evaluation-1-heading">Evaluation of Document Search</h2>
@@ -332,8 +513,8 @@
         Efficiency, Depandability, Stimulation and Novelty)</p> The questions answered from this experiment are,
 
     <ul>
-        <li class="next">What does the user feel about the usefullness of the method? i.e Pragmatic</li>
-        <li class="next">What does the user feel about the ease of use of the method? i.e Hedonic</li>
+        <li class="next">What does the user feel about the usefullness of the method? i.e Pragmatic Value</li>
+        <li class="next">What does the user feel about the ease of use of the method? i.e Hedonic Value</li>
     </ul>
 
     <style>
@@ -488,7 +669,7 @@
         <li>The existing ontology is the one we adjusted to our needs for the project, I will work on aligning with
             existing ontologies such as Dublin Core, FOAF, LOINC, DoCO, UN Document Ontology
         </li>
-        <li>We will work on better methods of analysing the data generated in the evaluation of document search</li>
+        <li>I will work on better methods of analysing the data generated in the evaluation of document search</li>
         <li>We are preparing a demo paper on searching over free-text and RDF at the same time</li>
         <li>We are also preparing a paper demonstrating wikibase as an infrastructure for valorising documents</li>
     </ul>
